@@ -1,12 +1,3 @@
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-}
-
-
 .container
 {
     width: 400px;
@@ -34,113 +25,64 @@
     justify-content: center;
     align-items: center; 
     background-color: white;          
-    
 }
-
-.hr
-{
-    --rotation:150;
-    width: 150px;
-    height: 150px;
-    transform: top;
-    transform: translate(-0%) rotate(calc(var(--rotation)* 1deg));
-    
-
-}
-.min
-{
-    --rotation:180;
-    width: 200px;
-    height: 200px;
-    transform: top;
-    transform: translate(-0%) rotate(calc(var(--rotation)* 1deg));
-    
-    
-}
-.sec
-{
-    --rotation:200;
-    width: 265px;
-    height: 265px;
-    transform: top;
-    transform: translate(-0%) rotate(calc(var(--rotation)* 1deg));
- 
-}
-
-
-.hr, .min, .sec
-{
-    /*border:1px solid black;*/
+.minutes-container, .hours-container, .seconds-container {
     position: absolute;
-    display: flex;
-    justify-content: center;
-    
-}
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
 .clock::before
 {
     content: '';
     height: 10px;
-    width: 10px;
+    width: 12px;
     background-color: black;
     border-radius: 50px;
 }
-.hr::before
-{
-   
+.hours {
+    background: green;
+    height: 25%;
+    left: 48.75%;
     position: absolute;
-    content:'';
-    width: 6px;
-    height: 75px;
-    background-color: black;
-    z-index: 11;
-    animation-name: hour;
-    animation-duration: 3600s;
-    animation-iteration-count: infinite;
-   
-}
-@keyframes hour{
-
-    
-}
-.min::before
-{
-        position: absolute;
-
-        content:'';
-        width: 4px;
-        height: 100px;
-        background-color: black;
-        z-index: 12;
-        animation-name: minute;
-        animation-duration: 60s;
-        animation-iteration-count: infinite;
-}
+    top: 24%;
+    transform-origin: 50% 100%;
+    width: 2%;
+  }
 
 
-@keyframes minute{
+  .minutes {
+    background: red;
+    height: 35%;
+    left: 49%;
+    position: absolute;
+    top: 16%;
+    transform-origin: 50% 100%;
+    width: 1.5%;
+  }
 
-    
-}
-.sec::before
-{
-    position: relative; content:''; width: 2px;
-    height: 135px;
-    background-color: black;
-    z-index: 13;
-    animation-name: second;
-    animation-duration: 1s;
-    animation-delay: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: right ;
-}
-
-@keyframes second{
-
-    0% {
-        transform: rotate(-180deg)
-    }
+  .seconds {
+    background: black;
+    height: 44%;
+    left: 49.5%;
+    position: absolute;
+    top: 7%;
+    transform-origin: 50% 80%;
+    width: 1%;
+    z-index: 8;
+  }
+  @keyframes rotate {
     100% {
-        transform: rotate(180deg)
+      transform: rotateZ(360deg);
     }
-   
-}
+  }
+  .hours-container {
+    animation: rotate 150s infinite linear;
+  }
+  .minutes-container {
+    animation: rotate 60s infinite steps(60);
+  }
+  .seconds-container {
+    animation: rotate 20s infinite steps(60);
+  }
