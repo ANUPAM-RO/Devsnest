@@ -1,0 +1,31 @@
+body{
+    border-style: groove;
+    border-color: cadetblue;
+    text-align: center;
+    margin: 5em 100px;
+    color: #37dde9;
+    text-size-adjust: 1;
+}
+.phant{
+    color: cadetblue;
+    text-align: center;
+    background-color: white;
+    position: absolute;
+    top:25;
+    left: 45%;
+}
+
+.grid-container{
+   display: grid;
+   grid-template-columns: 50% 50%; 
+   
+}
+.personal{
+    border-right:2px solid red ;
+    padding-right: 30%;
+}
+.experience{
+    padding-left: 30%;
+}
+
+
