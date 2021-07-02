@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class = "gride-container">
+    
+          <div class = "input"><input type="text" id="result"/></div>
+         
+     
+         
+         
+         <div class="first">
+            <div class="AC" onclick="clr()">AC</div>
+            <div onclick="del()">DEL</div>
+            <div onclick="dis('/')">/</div>
+         </div>
+       
+         
+      
+         <div class="midle">
+         <div onclick="dis('1')">1</div>
+         <div onclick="dis('2')">2</div> 
+         <div onclick="dis('3')">3</div>  
+         <div onclick="dis('*')">*</div>
+          
+          <div onclick="dis('4')">4</div>
+          <div onclick="dis('5')">5</div>
+          <div onclick="dis('6')">6 </div>
+          <div onclick="dis('+')">+</div> 
+       
+          <div onclick="dis('7')">7</div>
+          <div onclick="dis('8')">8 </div> 
+          <div onclick="dis('9')">9</div>
+          <div onclick="dis('-')">-</div>
+      
+      </div>
+     
+      <div class = "end">
+          <div onclick="dis('.')">.</div>
+          <div onclick="dis('0')">0</div>
+          <div class= "equal" onclick="solve()">=</div>
+        </div>  
+    </div>
+</body>
+</html>
