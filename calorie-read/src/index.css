@@ -1,0 +1,28 @@
+
+.App{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heading{
+    height:600px;
+    width: 600px;
+}
+.heading > h1{
+    text-align: center;
+}
+.card
+{
+        width: 90%;
+        background: #29D585;
+        padding: 5px;
+        margin: 6px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        box-shadow: 3px 1px 9px -1px  #29D585;
+}
+.container{
+    overflow: scroll;
+    height: 500px;
+    box-shadow: 3px 3px 5px black;
+}
