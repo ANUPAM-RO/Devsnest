@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+body{
+    height:100vh;
+    display: flex;
+    background-color: aqua;
+}
+.main-container{
+    height: 50%;
+    width: 40%;
+    display: flex;
+    margin: auto;
+    padding-left: 20px;
+    background-color: white;
+    box-shadow: 3px 3px 5px black
+}
+h2{
+    padding-top: 5px;
+    padding-bottom:5px;
+  }
+  #btn{
+      width: 60px;
+      height: 30px;
+      background-color: rgb(0, 128, 64);
+      display: block;
+      margin: auto;
+      text-transform: uppercase;
+      border: none;
+  }
+  .container{
+      display: grid;
+      grid-template-columns: auto;
+      gap: 15px;
+      margin-top: 10px;
+      
+  }
+
+  li{
+      list-style: none;
+      margin-top: 1rem;
+  }
+
+input{
+    cursor: pointer;
+}
+.scoArea{
+    display: none;
+}
+#btn:hover{
+    background-color:green;
+}
+#showScore{
+    background-color: gray;
+    margin-top:3rem;
+    padding: 3rem 4rem;
+}
+}
