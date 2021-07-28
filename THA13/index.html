@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Covid-19 API</title>
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center">Covid 19 Live Data in Table</h1>
+    <br><br>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Total Cases</th>
+                <th>Total Deaths</th>
+                <th>Total Recovered</th>
+            </tr>
+            <tr id="data">
+        </thead>
+        </table>
+        <br>
+        <button onclick="refresh()"class="btn">Refresh Data</button>
+            
+        </tr>
+        </div>
+    </body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+
+            init()  
+
+
+            function init(){
+                    fetch('https://api.covid19api.com/summary')
+                    .then(response => response.json())
+                    .then(data => 
+                    {console.log(data.Global)
+
+                    data = `
+                    <td> ${data.Global.TotalConfirmed}</td>
+                    <td> ${data.Global.TotalDeaths}</td>
+                    <td> ${data.Global.TotalRecovered}</td>
+                    `
+                    $("#data").html(data)
+                    });
+            }
+            function refresh(){
+                clearData()
+                init()
+            }
+            function clearData(){
+                $("#data").empty()
+                
+            }
+        
+
+        </script>
+        </html>
