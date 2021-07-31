@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS events</title>
+</head>
+<body>
+  
+    <button type="submit" onclick = "displayDate()">Click Me</button>
+    <p id="demo"></p>
+
+   
+    <p id ="demo2">Bring your mouse inside the division to see the result:</p>      
+      <button onmouseover = "over()" onmouseout = "out()">Over Me </button>
+         <h2> This is inside the division </h2>
+
+    <button onclick="display()">your name</button>
+
+
+<p>Select a new car from the list.</p>
+
+<select id="mySelect" onchange="myFunction()">
+  <option value="Audi">Audi</option>
+  <option value="BMW">BMW</option>
+  <option value="Mercedes">Mercedes</option>
+  <option value="Volvo">Volvo</option>
+</select>
+
+<p>When you select a new car, a function is triggered which outputs the value of the selected car.</p>
+
+<p id="text"></p>
+    <Script>
+    function displayDate() {
+    document.getElementById("demo").innerHTML = Date();
+    }
+    function display() {
+        alert("Your name is Anupam Roy");
+    }
+    </Script>
+    <Script>
+        function over() {
+            document.write("Over mouse in the text")
+        }
+        function out() {
+            document.write("Out mouse in the text")
+        }
+
+        </Script>
+
+
+<Script>
+   function myFunction() {
+  var x = document.getElementById("mySelect").value;
+  document.getElementById("text").innerHTML = "You selected: " + x;
+}
+
+    </Script>
+</body>
+</html>
